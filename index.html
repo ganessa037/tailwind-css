@@ -1,33 +1,308 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <title>Malaysia Muruga Peravai</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Make Website</title>
-</head>
-<body>
-    <div class="container min-h-screen bg-[url('images/Image.jpg')] bg-center bg-cover px-28 py-5 relative">
-        <nav class="flex items-center">
-            <img src="images/logo.png" class="w-40 cursor-pointer">
-            <ul class="flex-1 text-center">
-                <li class="list-none inline-block px-5"><a href="#" class="no-underline text-white px-2">Home</a></li>
-                <li class="list-none inline-block px-5"><a href="#" class="no-underline text-white px-2">About</a></li>
-                <li class="list-none inline-block px-5"><a href="#" class="no-underline text-white px-2">Features</a></li>
-                <li class="list-none inline-block px-5"><a href="#" class="no-underline text-white px-2">Contact</a></li>
-            </ul>
-            <img src="images/cart.png" class="w-8 cursor-pointer">
-        </nav>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        /* Custom CSS to Adjust Image heights in carousel */
+        .swiper-slide img {
+            width: 100%;
+            object-fit: cover;
+        }
 
-        <div class="text-white mt-48 max-w-xl">
-            <h1 class="text-6xl font-semibold leading-normal">Pork <br>delivery in <span class="font-light">15minutes</span> </h1>
-            <div class="mt-10">
-                <a href="#" class="bg-yellow-300 rounded-3xl py-3 px-8 font-medium inline-block mr-4 hover:bg-transparent hover:border-yellow-300 hover:text-white duration-300 hover:border border border-transparent">Order Now</a>
-                <a href="#">Download App <span class="text-lg inline-block rotate-90">&#10148;</span> </a>
+        /* Adjust the height for different screen sizes */
+        @media (min-width: 1024px) {
+            .swiper-slide img {
+                height: 400px; /* Height for large screens */
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1023px) {
+            .swiper-slide img {
+                height: 300px; /* Height for medium screens */
+            }
+        }
+
+        @media (max-width: 767px) {
+            .swiper-slide img {
+                height: 200px; /* Height for small screens */
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md sticky top-0 w-full z-10">
+        <div class="container mx-auto py-4 px-6">
+            <div class="flex items-center justify-between">
+                <div class="text-lg font-semibold text-gray-800">
+                    <img src="/logo.jpg" alt="Logo" class="h-12">
+                </div>
+                <div class="hidden md:flex space-x-6 items-center">
+                    <a href="#hero" class="text-gray-600 hover:text-indigo-600">Home</a>
+                    <a href="#about" class="text-gray-600 hover:text-indigo-600">About</a>
+                    <a href="#events" class="text-gray-600 hover:text-indigo-600">Events</a>
+                    <a href="#resources" class="text-gray-600 hover:text-indigo-600">Resources</a>
+                    <a href="#contact" class="text-gray-600 hover:text-indigo-600">Contact</a>
+                    <button class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700">Donate</button>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-gray-600 hover:text-indigo-600 focus:outline-none">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
             </div>
         </div>
-        <img src="images/grocery-image.png" class="w-full xl:w-1/2 xl:absolute bottom-0 right-20">
-    </div>
+    </nav>
+
+    <!-- Header -->
+    <header id="hero" class="relative bg-cover bg-center text-white py-24 px-6 mt-20"
+        style="background-image: url('muruga.webp');">
+        <div class="absolute inset-0 bg-black opacity-60"></div>
+        <div class="container mx-auto relative z-10 text-center">
+            <h2 class="text-4xl font-bold mb-4">Welcome to Malaysia Muruga Peravai</h2>
+            <p class="text-lg mb-8">Let's Serve Lord Muruga Together</p>
+       </div>
+    </header>
+
+    <!-- Photo Gallery Section (Swiper) -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-6 text-center">Photo Gallery</h2>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <!-- Slides (Repeat this block for each image) -->
+                    <div class="swiper-slide">
+                        <img src="muruga.webp" alt="Gallery Image" class="rounded-lg shadow-md">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="logo.jpg" alt="Gallery Image" class="rounded-lg shadow-md">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="muruga.webp" alt="Gallery Image" class="rounded-lg shadow-md">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="logo.jpg" alt="Gallery Image" class="rounded-lg shadow-md">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="muruga.webp" alt="Gallery Image" class="rounded-lg shadow-md">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="logo.jpg" alt="Gallery Image" class="rounded-lg shadow-md">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="muruga.webp" alt="Gallery Image" class="rounded-lg shadow-md">
+                    </div>
+                    <!-- End Slides -->
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-12 bg-gray-50">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-6">
+            <div>
+                <img src="muruga.webp" alt="About Us" class="rounded-lg shadow-md">
+            </div>
+            <div>
+                <h2 class="text-3xl font-semibold text-gray-800 mb-4">About Malaysia Muruga Peravai</h2>
+                <p class="text-gray-700 leading-relaxed">
+                    Malaysia Muruga Peravai is dedicated to serving Lord Muruga and the community through various
+                    spiritual and social initiatives. We strive to uphold the values of devotion, unity, and service.
+                </p>
+                <ul class="list-disc pl-5 mt-4 text-gray-700">
+                    <li>Organizing religious events and festivals</li>
+                    <li>Providing educational resources</li>
+                    <li>Supporting community welfare programs</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder Section -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-6">
+            <div>
+                <h2 class="text-3xl font-semibold text-gray-800 mb-4">About Founder</h2>
+                <p class="text-gray-700 leading-relaxed">
+                    Details about the founder of Malaysia Muruga Peravai and his vision for the organization.
+                </p>
+            </div>
+            <div>
+                <img src="muruga.webp" alt="Founder" class="rounded-lg shadow-md">
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Links Section -->
+    <section id="resources" class="py-12 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-6 text-center">Quick Links</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <!-- Example Quick Link (Repeat) -->
+                <a href="#" class="block bg-white rounded-lg shadow-md p-4 hover:bg-gray-200">
+                    <h3 class="text-xl font-semibold text-gray-700">Link Title</h3>
+                    <p class="text-gray-600">A short description.</p>
+                </a>
+                <!-- End Example Quick Link -->
+                <!-- Example Quick Link (Repeat) -->
+                <a href="#" class="block bg-white rounded-lg shadow-md p-4 hover:bg-gray-200">
+                    <h3 class="text-xl font-semibold text-gray-700">Link Title</h3>
+                    <p class="text-gray-600">A short description.</p>
+                </a>
+                <!-- End Example Quick Link -->
+                <!-- Example Quick Link (Repeat) -->
+                <a href="#" class="block bg-white rounded-lg shadow-md p-4 hover:bg-gray-200">
+                    <h3 class="text-xl font-semibold text-gray-700">Link Title</h3>
+                    <p class="text-gray-600">A short description.</p>
+                </a>
+                <!-- End Example Quick Link -->
+            </div>
+        </div>
+    </section>
+
+    <section id="speakers" class="py-12 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-6 text-center">Our Esteemed Speakers</h2>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <!-- Speaker Card 1 -->
+                    <div class="swiper-slide bg-white rounded-lg shadow-md p-6 text-center">
+                        <img src="muruga.webp" alt="Speaker 1" class="rounded-full w-32 h-32 mx-auto mb-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Dr. Arumugam</h3>
+                        <p class="text-gray-600">India</p>
+                    </div>
+                    <!-- Speaker Card 2 -->
+                    <div class="swiper-slide bg-white rounded-lg shadow-md p-6 text-center">
+                        <img src="logo.jpg"text-xl font-semibold text-gray-800">Kamala</h3>
+                        <p class="text-gray-600">Malaysia</p>
+                    </div>
+                    <!-- Speaker Card 3 -->
+                    <div class="swiper-slide bg-white rounded-lg shadow-md p-6 text-center">
+                        <img src="logo.jpg" alt="Speaker 3" class="rounded-full w-32 h-32 mx-auto mb-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Lee Chong Wei</h3>
+                        <p class="text-gray-600">Singapore</p>
+                    </div>
+                    <!-- Speaker Card 4 -->
+                    <div class="swiper-slide bg-white rounded-lg shadow-md p-6 text-center">
+                        <img src="/images/grocery-image.png" alt="Speaker 4" class="rounded-full w-32 h-32 mx-auto mb-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Siti Nurhaliza</h3>
+                        <p class="text-gray-600">Indonesia</p>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Documents Section -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-6 text-center">Important Documents</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- Example Document Link (Repeat) -->
+                <a href="#" class="block bg-gray-100 rounded-lg shadow-md p-4 hover:bg-gray-200">
+                    <h3 class="text-xl font-semibold text-gray-700">Document Name</h3>
+                    <p class="text-gray-600">Brief description of the document.</p>
+                </a>
+                <!-- End Example Document Link -->
+                <!-- Example Document Link (Repeat) -->
+                <a href="#" class="block bg-gray-100 rounded-lg shadow-md p-4 hover:bg-gray-200">
+                    <h3 class="text-xl font-semibold text-gray-700">Document Name</h3>
+                    <p class="text-gray-600">Brief description of the document.</p>
+                </a>
+                <!-- End Example Document Link -->
+                <!-- Example Document Link (Repeat) -->
+                <a href="#" class="block bg-gray-100 rounded-lg shadow-md p-4 hover:bg-gray-200">
+                    <h3 class="text-xl font-semibold text-gray-700">Document Name</h3>
+                    <p class="text-gray-600">Brief description of the document.</p>
+                </a>
+                <!-- End Example Document Link -->
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Footer Section -->
+    <footer id="contact" class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div>
+                <h3 class="text-2xl font-bold mb-4">Malaysia Muruga Peravai</h3>
+                <p>Serving Lord Muruga and the community.</p>
+            </div>
+            <div>
+                <h4 class="font-semibold text-gray-300">Contact Us</h4>
+                <p>Email: info@example.com</p>
+                <p>Phone: +1234567890</p>
+            </div>
+            <div>
+                <h4 class="font-semibold text-gray-300">Subscribe</h4>
+                <p>Stay updated with our latest events and news.</p>
+                <div class="mt-4 flex">
+                    <input type="email" placeholder="Enter your email"
+                        class="border p-2 rounded-l-lg text-black">
+                    <button class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 rounded-r-lg">Subscribe</button>
+                </div>
+            </div>
+        </div>
+        <div class="container mx-auto text-center mt-8">
+            <p class="text-sm text-gray-400">© 2024 Malaysia Muruga Peravai. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubOU5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+         var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+    
 </body>
+
 </html>
